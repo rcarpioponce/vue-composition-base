@@ -46,7 +46,24 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "counter" */ '../views/Pokemon.vue')
-  }    
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/Todo.vue')
+  },
+  {
+    path: '/slots',
+    name: 'slots',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/CustomSlots.vue')
+  }     
+
 ]
 
 const router = createRouter({
